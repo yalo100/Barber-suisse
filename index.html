@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barber Swiss | Men's Barber Shop</title>
+  <title>Barber Suisse | Men's Barber Shop</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body data-lang="en">
   <header class="site-header">
     <div class="container header-content">
-      <a class="logo" href="#home">Barber Swiss</a>
+      <a class="logo" href="#home">
+        <span class="barber-pole" aria-hidden="true"></span>
+        <span>Barber Suisse</span>
+      </a>
       <nav class="main-nav">
         <a href="#home" data-i18n="nav.home">Home</a>
         <a href="#services" data-i18n="nav.services">Services</a>
@@ -78,6 +81,21 @@
           <h2 data-i18n="contact.title">Contact</h2>
           <p data-i18n="contact.subtitle">Reach out to reserve your appointment or ask about our services.</p>
         </div>
+        <div class="contact-details">
+          <div class="contact-card">
+            <h3 data-i18n="contact.phoneTitle">Phone</h3>
+            <a href="tel:+212522215455">05 22 21 54 55</a>
+            <a href="tel:+212668774497">06 68 77 44 97</a>
+          </div>
+          <div class="contact-card">
+            <h3 data-i18n="contact.whatsappTitle">WhatsApp</h3>
+            <a href="https://wa.me/212668774497" target="_blank" rel="noreferrer">+212 6 68 77 44 97</a>
+          </div>
+          <div class="contact-card">
+            <h3 data-i18n="contact.instagramTitle">Instagram</h3>
+            <a href="https://instagram.com/barber_suisse" target="_blank" rel="noreferrer">@barber_suisse</a>
+          </div>
+        </div>
         <form class="contact-form" id="contactForm" novalidate>
           <div class="form-group">
             <label for="name" data-i18n="contact.nameLabel">Name</label>
@@ -127,6 +145,16 @@
       <a href="#contact" data-i18n="footer.contact">Contact Us</a>
     </div>
   </footer>
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/212668774497"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="WhatsApp Barber Suisse"
+  >
+    <span class="floating-icon">💬</span>
+    WhatsApp
+  </a>
 
   <script src="script.js"></script>
 </body>
