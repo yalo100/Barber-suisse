@@ -1,14 +1,15 @@
 :root {
   color-scheme: dark;
-  --black: #070707;
-  --deep-black: #0f0f0f;
-  --muted-black: #1a1a1a;
-  --charcoal: #232323;
+  --black: #050505;
+  --deep-black: #0c0c0c;
+  --muted-black: #141414;
+  --charcoal: #1e1e1e;
   --gold: #d6b56c;
-  --gold-bright: #f3d28a;
-  --gold-soft: rgba(214, 181, 108, 0.25);
-  --border-color: rgba(214, 181, 108, 0.3);
+  --gold-bright: #f8d98e;
+  --gold-soft: rgba(214, 181, 108, 0.2);
+  --border-color: rgba(248, 217, 142, 0.25);
   --white: #ffffff;
+  --glow: 0 0 40px rgba(248, 217, 142, 0.12);
 }
 
 * {
@@ -22,12 +23,16 @@
   height: auto;
   display: block;
   margin: 20px 0;
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
 }
 
 body {
   background-color: var(--black);
   color: var(--gold);
   line-height: 1.6;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
 a {
@@ -98,6 +103,13 @@ a {
 .main-nav a {
   position: relative;
   padding-bottom: 0.3rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  opacity: 1;
 }
 
 .main-nav a::after {
@@ -142,15 +154,17 @@ a {
 }
 
 .hero {
-  background: radial-gradient(circle at top, rgba(214, 181, 108, 0.12), transparent 50%),
-    linear-gradient(135deg, #0c0c0c, #1a1a1a);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(248, 217, 142, 0.18), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(214, 181, 108, 0.12), transparent 40%),
+    linear-gradient(135deg, #050505, #1a1a1a);
   padding: 4.5rem 0;
 }
 
 .hero-content {
   display: grid;
   gap: 2.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   align-items: center;
 }
 
@@ -163,7 +177,7 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(2.2rem, 2vw + 2rem, 3.2rem);
+  font-size: clamp(2.4rem, 2vw + 2.4rem, 3.6rem);
   margin-bottom: 1rem;
   color: var(--gold-bright);
 }
@@ -171,6 +185,42 @@ a {
 .hero p {
   margin-bottom: 1.5rem;
   max-width: 480px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.hero-stats {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  background: rgba(20, 20, 20, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: var(--glow);
+}
+
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-bright);
+}
+
+.stat-label {
+  color: rgba(248, 217, 142, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.hero-visual {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .hero-card {
@@ -239,6 +289,24 @@ a {
 
 .contact {
   background-color: var(--deep-black);
+}
+
+.experience {
+  background: linear-gradient(120deg, rgba(14, 14, 14, 0.95), rgba(8, 8, 8, 0.95));
+}
+
+.experience-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.experience-card {
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: var(--glow);
 }
 
 .contact-details {
@@ -328,6 +396,22 @@ textarea:focus {
 .button:hover,
 .button:focus {
   background-color: var(--gold-bright);
+}
+
+.button-ghost {
+  background-color: transparent;
+  color: var(--gold-bright);
+  border: 1px solid var(--border-color);
+}
+
+.button-ghost:hover,
+.button-ghost:focus {
+  background-color: var(--gold-soft);
+}
+
+.button-small {
+  padding: 0.6rem 1.3rem;
+  font-size: 0.85rem;
 }
 
 .site-footer {
