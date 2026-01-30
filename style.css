@@ -1,12 +1,15 @@
 :root {
-  color-scheme: light;
+  color-scheme: dark;
+  --black: #050505;
+  --deep-black: #0c0c0c;
+  --muted-black: #141414;
+  --charcoal: #1e1e1e;
+  --gold: #d6b56c;
+  --gold-bright: #f8d98e;
+  --gold-soft: rgba(214, 181, 108, 0.2);
+  --border-color: rgba(248, 217, 142, 0.25);
   --white: #ffffff;
-  --black: #111111;
-  --muted-black: #1f1f1f;
-  --soft-green: #7da89d;
-  --light-green: #e8f0ed;
-  --light-gray: #f7f7f7;
-  --border-color: #d9e3df;
+  --glow: 0 0 40px rgba(248, 217, 142, 0.12);
 }
 
 * {
@@ -20,12 +23,16 @@
   height: auto;
   display: block;
   margin: 20px 0;
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
 }
 
 body {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--black);
+  color: var(--gold);
   line-height: 1.6;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
 a {
@@ -39,11 +46,12 @@ a {
 }
 
 .site-header {
-  background-color: var(--white);
+  background-color: rgba(7, 7, 7, 0.92);
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 10;
+  backdrop-filter: blur(12px);
 }
 
 .header-content {
@@ -59,6 +67,29 @@ a {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.barber-pole {
+  width: 14px;
+  height: 42px;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    #fefefe 0%,
+    #fefefe 20%,
+    #e11d2e 20%,
+    #e11d2e 40%,
+    #ffffff 40%,
+    #ffffff 60%,
+    #1d4ed8 60%,
+    #1d4ed8 80%,
+    #ffffff 80%,
+    #ffffff 100%
+  );
+  box-shadow: 0 0 0 3px #fef3c7, 0 0 18px rgba(255, 255, 255, 0.2);
 }
 
 .main-nav {
@@ -72,6 +103,13 @@ a {
 .main-nav a {
   position: relative;
   padding-bottom: 0.3rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  opacity: 1;
 }
 
 .main-nav a::after {
@@ -81,7 +119,7 @@ a {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: var(--soft-green);
+  background-color: var(--gold);
   transition: width 0.2s ease-in-out;
 }
 
@@ -93,7 +131,7 @@ a {
 .lang-switch {
   display: inline-flex;
   gap: 0.5rem;
-  background-color: var(--light-gray);
+  background-color: var(--charcoal);
   border-radius: 999px;
   padding: 0.25rem;
 }
@@ -101,7 +139,7 @@ a {
 .lang-button {
   border: none;
   background: transparent;
-  color: var(--muted-black);
+  color: var(--gold);
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0.35rem 0.85rem;
@@ -111,24 +149,27 @@ a {
 }
 
 .lang-button[aria-pressed="true"] {
-  background-color: var(--muted-black);
-  color: var(--white);
+  background-color: var(--gold);
+  color: var(--black);
 }
 
 .hero {
-  background: linear-gradient(120deg, var(--light-gray), var(--light-green));
+  background:
+    radial-gradient(circle at 20% 10%, rgba(248, 217, 142, 0.18), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(214, 181, 108, 0.12), transparent 40%),
+    linear-gradient(135deg, #050505, #1a1a1a);
   padding: 4.5rem 0;
 }
 
 .hero-content {
   display: grid;
   gap: 2.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   align-items: center;
 }
 
 .eyebrow {
-  color: var(--soft-green);
+  color: var(--gold-bright);
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.25em;
@@ -136,9 +177,9 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(2.2rem, 2vw + 2rem, 3.2rem);
+  font-size: clamp(2.4rem, 2vw + 2.4rem, 3.6rem);
   margin-bottom: 1rem;
-  color: var(--muted-black);
+  color: var(--gold-bright);
 }
 
 .hero p {
@@ -146,12 +187,48 @@ a {
   max-width: 480px;
 }
 
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.hero-stats {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  background: rgba(20, 20, 20, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: var(--glow);
+}
+
+.stat-number {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold-bright);
+}
+
+.stat-label {
+  color: rgba(248, 217, 142, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.hero-visual {
+  display: grid;
+  gap: 1.5rem;
+}
+
 .hero-card {
-  background-color: var(--white);
+  background-color: var(--muted-black);
   border: 1px solid var(--border-color);
   border-radius: 18px;
   padding: 2rem;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
 }
 
 .hero-card ul {
@@ -177,7 +254,7 @@ a {
 }
 
 .section-header p {
-  color: #4b4b4b;
+  color: rgba(214, 181, 108, 0.7);
 }
 
 .services-grid {
@@ -187,7 +264,7 @@ a {
 }
 
 .service-card {
-  background-color: var(--white);
+  background-color: var(--muted-black);
   border: 1px solid var(--border-color);
   padding: 2rem;
   border-radius: 16px;
@@ -201,17 +278,65 @@ a {
 .service-card:hover,
 .service-card:focus-within {
   transform: translateY(-6px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
 }
 
 .service-price {
   margin-top: 1.5rem;
-  color: var(--soft-green);
+  color: var(--gold-bright);
   font-weight: 600;
 }
 
 .contact {
-  background-color: var(--light-gray);
+  background-color: var(--deep-black);
+}
+
+.experience {
+  background: linear-gradient(120deg, rgba(14, 14, 14, 0.95), rgba(8, 8, 8, 0.95));
+}
+
+.experience-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.experience-card {
+  background-color: rgba(20, 20, 20, 0.9);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: var(--glow);
+}
+
+.contact-details {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 2.5rem;
+}
+
+.contact-card {
+  background-color: var(--muted-black);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contact-card h3 {
+  color: var(--gold-bright);
+}
+
+.contact-card a {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.contact-card a:hover,
+.contact-card a:focus {
+  color: var(--gold-bright);
 }
 
 .contact-form {
@@ -237,13 +362,14 @@ textarea {
   border-radius: 12px;
   padding: 0.8rem 1rem;
   font-size: 1rem;
-  background-color: var(--white);
+  background-color: var(--charcoal);
+  color: var(--gold);
 }
 
 input:focus,
 textarea:focus {
-  outline: 2px solid rgba(125, 168, 157, 0.5);
-  border-color: var(--soft-green);
+  outline: 2px solid var(--gold-soft);
+  border-color: var(--gold-bright);
 }
 
 .error {
@@ -256,8 +382,8 @@ textarea:focus {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--muted-black);
-  color: var(--white);
+  background-color: var(--gold);
+  color: var(--black);
   padding: 0.85rem 1.8rem;
   border-radius: 999px;
   border: none;
@@ -269,12 +395,28 @@ textarea:focus {
 
 .button:hover,
 .button:focus {
-  background-color: #000000;
+  background-color: var(--gold-bright);
+}
+
+.button-ghost {
+  background-color: transparent;
+  color: var(--gold-bright);
+  border: 1px solid var(--border-color);
+}
+
+.button-ghost:hover,
+.button-ghost:focus {
+  background-color: var(--gold-soft);
+}
+
+.button-small {
+  padding: 0.6rem 1.3rem;
+  font-size: 0.85rem;
 }
 
 .site-footer {
   background-color: var(--muted-black);
-  color: var(--white);
+  color: var(--gold);
   padding: 1.5rem 0;
 }
 
@@ -287,7 +429,34 @@ textarea:focus {
 }
 
 .footer-content a {
-  color: var(--soft-green);
+  color: var(--gold-bright);
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  background: linear-gradient(135deg, #1f9950, #25d366);
+  color: var(--white);
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+  z-index: 20;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.floating-icon {
+  font-size: 1.1rem;
+}
+
+.floating-whatsapp:hover,
+.floating-whatsapp:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.45);
 }
 
 @media (max-width: 768px) {
