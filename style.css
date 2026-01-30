@@ -45,6 +45,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 0;
+  gap: 1.5rem;
 }
 
 .logo {
@@ -81,6 +82,31 @@ a {
 .main-nav a:hover::after,
 .main-nav a:focus::after {
   width: 100%;
+}
+
+.lang-switch {
+  display: inline-flex;
+  gap: 0.5rem;
+  background-color: var(--light-gray);
+  border-radius: 999px;
+  padding: 0.25rem;
+}
+
+.lang-button {
+  border: none;
+  background: transparent;
+  color: var(--muted-black);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-button[aria-pressed="true"] {
+  background-color: var(--muted-black);
+  color: var(--white);
 }
 
 .hero {
