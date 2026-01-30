@@ -17,9 +17,9 @@
 
 .business-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
+  margin: 20px 0;
 }
 
 body {
@@ -123,36 +123,8 @@ a {
 .hero-content {
   display: grid;
   gap: 2.5rem;
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.8fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   align-items: center;
-}
-
-.hero-media {
-  position: relative;
-  border-radius: 28px;
-  overflow: hidden;
-  min-height: 420px;
-  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.18);
-}
-
-.hero-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(140deg, rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.2));
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 1rem;
-  padding: 3rem;
-  color: var(--white);
-  max-width: 520px;
 }
 
 .eyebrow {
@@ -172,32 +144,6 @@ a {
 .hero p {
   margin-bottom: 1.5rem;
   max-width: 480px;
-}
-
-.hero-overlay .eyebrow {
-  color: #d9f0ea;
-  margin-bottom: 0;
-}
-
-.hero-overlay h1 {
-  color: var(--white);
-  margin-bottom: 0;
-}
-
-.hero-overlay p {
-  color: #f2f2f2;
-  margin-bottom: 0;
-}
-
-.hero-overlay .button {
-  align-self: flex-start;
-  background-color: var(--white);
-  color: var(--muted-black);
-}
-
-.hero-overlay .button:hover,
-.hero-overlay .button:focus {
-  background-color: #f0f0f0;
 }
 
 .hero-card {
@@ -358,27 +304,11 @@ textarea:focus {
   .hero {
     padding: 3.5rem 0;
   }
-
-  .hero-content {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-media {
-    min-height: 360px;
-  }
-
-  .hero-overlay {
-    padding: 2.25rem;
-  }
 }
 
 @media (max-width: 480px) {
   .hero-card {
     padding: 1.5rem;
-  }
-
-  .hero-overlay {
-    padding: 1.75rem;
   }
 
   .section {
