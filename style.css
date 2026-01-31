@@ -7,9 +7,15 @@
   --gold: #d6b56c;
   --gold-bright: #f8d98e;
   --gold-soft: rgba(214, 181, 108, 0.2);
-  --border-color: rgba(248, 217, 142, 0.25);
+  --border-color: rgba(248, 217, 142, 0.18);
   --white: #ffffff;
+  --text-primary: #f8f1df;
+  --text-muted: rgba(248, 217, 142, 0.7);
+  --surface: rgba(15, 15, 15, 0.75);
+  --surface-strong: rgba(18, 18, 18, 0.95);
   --glow: 0 0 40px rgba(248, 217, 142, 0.12);
+  --shadow-strong: 0 30px 80px rgba(0, 0, 0, 0.5);
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.32);
 }
 
 * {
@@ -20,9 +26,31 @@
 
 body {
   background-color: var(--black);
-  color: var(--gold);
+  color: var(--text-primary);
   line-height: 1.6;
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(248, 217, 142, 0.14), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(214, 181, 108, 0.12), transparent 40%),
+    linear-gradient(160deg, rgba(5, 5, 5, 0.95), rgba(12, 12, 12, 0.98));
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(248, 217, 142, 0.08) 1px, transparent 0);
+  background-size: 48px 48px;
+  opacity: 0.12;
+  z-index: -1;
+  pointer-events: none;
 }
 
 a {
@@ -36,12 +64,12 @@ img {
 }
 
 .container {
-  width: min(1120px, 90%);
+  width: min(1200px, 92%);
   margin: 0 auto;
 }
 
 .site-header {
-  background-color: rgba(7, 7, 7, 0.92);
+  background-color: rgba(7, 7, 7, 0.82);
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
@@ -53,7 +81,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 0;
+  padding: 1.4rem 0;
   gap: 1.5rem;
   flex-wrap: wrap;
 }
@@ -66,6 +94,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+  color: var(--text-primary);
 }
 
 .logo img {
@@ -89,7 +118,7 @@ img {
 .main-nav a {
   position: relative;
   padding-bottom: 0.3rem;
-  opacity: 0.85;
+  opacity: 0.78;
   transition: opacity 0.2s ease;
 }
 
@@ -152,7 +181,7 @@ img {
     radial-gradient(circle at 20% 10%, rgba(248, 217, 142, 0.18), transparent 45%),
     radial-gradient(circle at 80% 20%, rgba(214, 181, 108, 0.12), transparent 40%),
     linear-gradient(135deg, #050505, #1a1a1a);
-  padding: 4.5rem 0;
+  padding: clamp(4rem, 6vw, 6rem) 0;
 }
 
 .hero-content {
@@ -242,7 +271,7 @@ img {
 }
 
 .section {
-  padding: 4.5rem 0;
+  padding: clamp(3.8rem, 6vw, 5.5rem) 0;
 }
 
 .section-header {
