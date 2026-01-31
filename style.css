@@ -109,7 +109,10 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   flex-wrap: wrap;
-  color: var(--text-primary);
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background-color: var(--muted-black);
 }
 
 .main-nav a {
@@ -152,13 +155,13 @@ img {
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 18px 40px rgba(214, 181, 108, 0.25);
+  box-shadow: var(--glow);
 }
 
 .button:hover,
 .button:focus {
   transform: translateY(-2px);
-  box-shadow: 0 24px 50px rgba(248, 217, 142, 0.26);
+  box-shadow: 0 20px 40px rgba(248, 217, 142, 0.18);
 }
 
 .button-small {
@@ -167,9 +170,9 @@ img {
 }
 
 .button-ghost {
-  background-color: rgba(214, 181, 108, 0.08);
-  border: 1px solid var(--border-color);
-  color: var(--gold-bright);
+  background-color: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
   box-shadow: none;
 }
 
@@ -205,7 +208,6 @@ img {
 .hero p {
   margin-bottom: 1.5rem;
   max-width: 520px;
-  color: var(--text-muted);
 }
 
 .hero-actions {
@@ -229,7 +231,7 @@ img {
 
 .stat-label {
   font-size: 0.95rem;
-  color: var(--text-muted);
+  color: rgba(248, 217, 142, 0.7);
 }
 
 .hero-visual {
@@ -239,15 +241,13 @@ img {
 .hero-image {
   width: 100%;
   height: auto;
-  border-radius: 28px;
+  border-radius: 24px;
   border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-strong);
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
 }
 
 .hero-card {
-  background-color: var(--surface-strong);
+  background-color: var(--deep-black);
   border: 1px solid var(--border-color);
   border-radius: 18px;
   padding: 1.5rem;
@@ -255,8 +255,7 @@ img {
   bottom: -2rem;
   right: 1.5rem;
   width: min(260px, 80%);
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(14px);
+  box-shadow: var(--glow);
 }
 
 .hero-card h2 {
@@ -268,7 +267,7 @@ img {
   list-style: none;
   display: grid;
   gap: 0.4rem;
-  color: var(--text-muted);
+  color: rgba(248, 217, 142, 0.7);
 }
 
 .section {
@@ -289,7 +288,7 @@ img {
 
 .section-header p {
   max-width: 640px;
-  color: var(--text-muted);
+  color: rgba(248, 217, 142, 0.7);
 }
 
 .intro-grid {
@@ -303,8 +302,7 @@ img {
   border: 1px solid var(--border-color);
   border-radius: 18px;
   padding: 1.8rem;
-  background-color: var(--surface);
-  backdrop-filter: blur(12px);
+  background-color: var(--muted-black);
 }
 
 .intro-card ul {
@@ -312,7 +310,7 @@ img {
   display: grid;
   gap: 0.6rem;
   margin-top: 1rem;
-  color: var(--text-muted);
+  color: rgba(248, 217, 142, 0.7);
 }
 
 .services-grid {
@@ -322,14 +320,13 @@ img {
 }
 
 .service-card {
-  background-color: var(--surface);
+  background-color: var(--deep-black);
   border-radius: 18px;
   border: 1px solid var(--border-color);
   padding: 1.5rem;
   display: grid;
   gap: 0.8rem;
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(12px);
+  box-shadow: var(--glow);
 }
 
 .service-card img {
@@ -344,20 +341,19 @@ img {
 }
 
 .service-card p {
-  color: var(--text-muted);
+  color: rgba(248, 217, 142, 0.7);
 }
 
 .featured,
 .gallery {
-  background-color: rgba(10, 10, 10, 0.8);
+  background-color: var(--deep-black);
 }
 
 .iframe-wrapper {
   border-radius: 18px;
   border: 1px solid var(--border-color);
   overflow: hidden;
-  background-color: var(--surface);
-  box-shadow: var(--shadow-soft);
+  background-color: var(--muted-black);
 }
 
 .iframe-wrapper iframe {
@@ -368,7 +364,7 @@ img {
 
 .helper-text {
   margin-top: 1rem;
-  color: var(--text-muted);
+  color: rgba(248, 217, 142, 0.7);
 }
 
 .contact-grid {
@@ -384,11 +380,10 @@ img {
 }
 
 .contact-card {
-  background-color: var(--surface-strong);
+  background-color: var(--deep-black);
   border-radius: 18px;
   border: 1px solid var(--border-color);
   padding: 1.4rem;
-  box-shadow: var(--shadow-soft);
 }
 
 .contact-card a {
@@ -398,14 +393,12 @@ img {
 }
 
 .contact-form {
-  background-color: var(--surface);
+  background-color: var(--muted-black);
   border-radius: 18px;
   border: 1px solid var(--border-color);
   padding: 1.8rem;
   display: grid;
   gap: 1rem;
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(12px);
 }
 
 .form-group {
@@ -419,7 +412,7 @@ textarea {
   border: 1px solid rgba(248, 217, 142, 0.2);
   border-radius: 12px;
   padding: 0.75rem 0.9rem;
-  color: var(--text-primary);
+  color: var(--gold-bright);
   font-size: 0.95rem;
 }
 
@@ -440,7 +433,6 @@ textarea:focus {
   border-radius: 18px;
   border: 1px solid var(--border-color);
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
 }
 
 .map-wrapper iframe {
@@ -450,22 +442,21 @@ textarea:focus {
 }
 
 .legal {
-  background-color: rgba(14, 14, 14, 0.92);
+  background-color: var(--muted-black);
 }
 
 .legal-card {
   border: 1px solid var(--border-color);
   border-radius: 18px;
   padding: 1.6rem;
-  background-color: var(--surface-strong);
-  color: var(--text-muted);
-  box-shadow: var(--shadow-soft);
+  background-color: var(--deep-black);
+  color: rgba(248, 217, 142, 0.7);
 }
 
 .site-footer {
   padding: 2rem 0 3rem;
   border-top: 1px solid var(--border-color);
-  background-color: rgba(5, 5, 5, 0.95);
+  background-color: #050505;
 }
 
 .footer-content {
@@ -499,7 +490,7 @@ textarea:focus {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   z-index: 20;
 }
 
