@@ -2,72 +2,97 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barber Suisse | Men's Barber Shop</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Barber Suisse | Barbier pour hommes à Casablanca</title>
+  <meta
+    name="description"
+    content="Barber Suisse, salon de coiffure pour hommes avec 18 ans d'excellence. Coupe de cheveux, soins de la barbe, visagistes, manucure, pédicure et plus encore."
+  />
+  <meta
+    name="keywords"
+    content="Coiffure pour hommes, Barbier pour hommes, Soins de la barbe, Coupe de cheveux, Visagiste, Manucure, Pédicure, Barber Suisse"
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body data-lang="fr">
+<body>
   <header class="site-header">
     <div class="container header-content">
-      <a class="logo" href="#home" aria-label="Barber Suisse">
-        <span class="barber-pole" aria-hidden="true"></span>
+      <a class="logo" href="#accueil" aria-label="Barber Suisse">
+        <img src="assets/logo-barber-suisse.svg" alt="Logo Barber Suisse" />
         <span>Barber Suisse</span>
       </a>
-      <nav class="main-nav" aria-label="Primary">
-        <a href="#home" data-i18n="nav.home">Home</a>
-        <a href="#services" data-i18n="nav.services">Services</a>
-        <a href="#experience" data-i18n="nav.experience">Experience</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#contact">Contact</a>
       </nav>
-      <a class="button button-small" href="https://wa.me/212668774497" target="_blank" rel="noreferrer" data-i18n="nav.whatsapp">
-        WhatsApp
-      </a>
-      <div class="lang-switch" role="group" aria-label="Language switcher">
-        <button type="button" class="lang-button" data-lang-switch="en" aria-pressed="true">EN</button>
-        <button type="button" class="lang-button" data-lang-switch="fr" aria-pressed="false">FR</button>
-      </div>
     </div>
   </header>
 
   <main>
-    <section id="home" class="hero">
+    <section id="accueil" class="hero">
       <div class="container hero-content">
         <div class="hero-text">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Premium grooming in the heart of the city</p>
-          <h1 data-i18n="hero.title">Precision cuts for the modern gentleman.</h1>
-          <p data-i18n="hero.body">
-            Barber Suisse delivers a refined, high-end barbering experience. Settle into a calm space while we craft a
-            style that feels sharp, confident, and effortless.
+          <p class="eyebrow">Coiffure pour hommes & savoir-faire premium</p>
+          <h1>Venez vivre l’expérience de 18 ans d’excellence en coiffure masculine</h1>
+          <p>
+            Barber Suisse est un salon de coiffure pour hommes reconnu à Casablanca. Depuis 18 ans, nous proposons des
+            coupes impeccables, des soins de la barbe sur-mesure et un accueil haut de gamme dans une ambiance moderne.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#contact" data-i18n="hero.cta">Book now</a>
-            <a class="button button-ghost" href="#services" data-i18n="hero.secondaryCta">Explore services</a>
+            <a class="button" href="#contact">Prendre rendez-vous</a>
+            <a class="button button-ghost" href="#services">Découvrir nos services</a>
           </div>
-          <div class="hero-stats">
+          <div class="hero-highlights">
             <div>
-              <p class="stat-number" data-i18n="hero.statOneNumber">10+</p>
-              <p class="stat-label" data-i18n="hero.statOneLabel">Years of expertise</p>
+              <p class="stat-number">18 ans</p>
+              <p class="stat-label">d'expertise en coiffure masculine</p>
             </div>
             <div>
-              <p class="stat-number" data-i18n="hero.statTwoNumber">4.9</p>
-              <p class="stat-label" data-i18n="hero.statTwoLabel">Customer rating</p>
+              <p class="stat-number">Service premium</p>
+              <p class="stat-label">ambiance élégante & conviviale</p>
             </div>
             <div>
-              <p class="stat-number" data-i18n="hero.statThreeNumber">1200+</p>
-              <p class="stat-label" data-i18n="hero.statThreeLabel">Happy clients</p>
+              <p class="stat-number">Visagiste</p>
+              <p class="stat-label">conseils personnalisés</p>
             </div>
           </div>
         </div>
         <div class="hero-visual">
-          <img src="assets/2024-07-28.webp" alt="Front of Barber Suisse" class="business-image" />
+          <img
+            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80"
+            alt="Salon Barber Suisse, ambiance moderne"
+            class="hero-image"
+          />
           <div class="hero-card">
-            <h2 data-i18n="hero.hoursTitle">Opening Hours</h2>
+            <h2>Horaires</h2>
             <ul>
-              <li data-i18n="hero.hoursWeek">Mon - Fri: 9:00 - 19:00</li>
-              <li data-i18n="hero.hoursSat">Saturday: 9:00 - 17:00</li>
-              <li data-i18n="hero.hoursSun">Sunday: Closed</li>
+              <li>Lun - Sam : 09h00 - 20h00</li>
+              <li>Dimanche : fermé</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div class="container intro-grid">
+        <div>
+          <h2>Barber Suisse, votre barbier pour hommes à Casablanca</h2>
+          <p>
+            Notre salon combine techniques modernes, précision et confort. Nous travaillons avec des produits haut de
+            gamme pour assurer des coupes de cheveux élégantes, des soins de la barbe précis et des services complets
+            allant de la manucure aux soins du visage.
+          </p>
+        </div>
+        <div class="intro-card">
+          <h3>Pourquoi nous choisir ?</h3>
+          <ul>
+            <li>18 ans d'expérience et d'excellence.</li>
+            <li>Barbiers spécialisés en coiffure masculine.</li>
+            <li>Ambiance lounge avec café et TV 75 pouces pour les matchs.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -75,127 +100,211 @@
     <section id="services" class="section">
       <div class="container">
         <div class="section-header">
-          <h2 data-i18n="services.title">Services</h2>
-          <p data-i18n="services.subtitle">Tailored treatments designed for clean lines and effortless confidence.</p>
+          <h2>Services</h2>
+          <p>Une offre complète pour l’homme moderne : coiffure, barbe, soins et détente.</p>
         </div>
         <div class="services-grid">
           <article class="service-card">
-            <h3 data-i18n="services.haircuts.title">Haircuts</h3>
-            <p data-i18n="services.haircuts.body">Precision cuts tailored to your style with a clean finish and expert detailing.</p>
-            <span class="service-price" data-i18n="services.haircuts.price">From CHF 35</span>
+            <img
+              src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80"
+              alt="Coupe de cheveux homme chez Barber Suisse"
+            />
+            <h3>Coupe de cheveux</h3>
+            <p>Dégradés, coupes classiques ou tendances avec finition précise et conseils visagistes.</p>
           </article>
           <article class="service-card">
-            <h3 data-i18n="services.beard.title">Beard Grooming</h3>
-            <p data-i18n="services.beard.body">Shape, trim, and condition your beard for a refined, polished look.</p>
-            <span class="service-price" data-i18n="services.beard.price">From CHF 25</span>
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80"
+              alt="Soins de la barbe chez Barber Suisse"
+            />
+            <h3>Soins de la barbe</h3>
+            <p>Taille, rasage et entretien pour une barbe nette et parfaitement sculptée.</p>
           </article>
           <article class="service-card">
-            <h3 data-i18n="services.package.title">Special Package</h3>
-            <p data-i18n="services.package.body">Complete grooming experience combining haircut and beard service.</p>
-            <span class="service-price" data-i18n="services.package.price">From CHF 55</span>
+            <img
+              src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=600&q=80"
+              alt="Manucure et pédicure hommes"
+            />
+            <h3>Manucure & pédicure</h3>
+            <p>Soins des mains et des pieds pour un look soigné jusqu'au bout des ongles.</p>
           </article>
           <article class="service-card">
-            <h3 data-i18n="services.ritual.title">Ritual Deluxe</h3>
-            <p data-i18n="services.ritual.body">Steam, hot towel, and premium care for a full reset.</p>
-            <span class="service-price" data-i18n="services.ritual.price">From CHF 70</span>
+            <img
+              src="https://images.unsplash.com/photo-1519725177862-5fc6f9f9f8a0?auto=format&fit=crop&w=600&q=80"
+              alt="Traitement protéiné pour cheveux"
+            />
+            <h3>Protéines pour cheveux</h3>
+            <p>Traitements nourrissants pour des cheveux forts, brillants et en bonne santé.</p>
+          </article>
+          <article class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80"
+              alt="Peinture et teinture de cheveux"
+            />
+            <h3>Peinture & teinture</h3>
+            <p>Coloration naturelle ou couverture des cheveux blancs avec finition professionnelle.</p>
+          </article>
+          <article class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80"
+              alt="Soins du visage pour hommes"
+            />
+            <h3>Soins du visage</h3>
+            <p>Nettoyage et hydratation pour une peau revitalisée et éclatante.</p>
+          </article>
+          <article class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
+              alt="Café offert chez Barber Suisse"
+            />
+            <h3>Café</h3>
+            <p>Un café de bienvenue offert pour une expérience premium et relaxante.</p>
+          </article>
+          <article class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=600&q=80"
+              alt="Services de visagistes pour hommes"
+            />
+            <h3>Services de visagistes</h3>
+            <p>Conseils personnalisés pour trouver la coupe et la barbe qui valorisent votre visage.</p>
+          </article>
+          <article class="service-card">
+            <img
+              src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=600&q=80"
+              alt="Télévision 75 pouces avec match de football"
+            />
+            <h3>TV 75 pouces & football</h3>
+            <p>Profitez des matchs de football sur écran géant pendant votre rendez-vous.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section experience">
+    <section class="section featured" id="photos-une">
       <div class="container">
         <div class="section-header">
-          <h2 data-i18n="experience.title">The Barber Suisse experience</h2>
-          <p data-i18n="experience.subtitle">Designed for men who want precision, comfort, and a signature look.</p>
+          <h2>Photos à la Une</h2>
+          <p>Les dernières photos mises en avant par le salon via Google Photos.</p>
         </div>
-        <div class="experience-grid">
-          <article class="experience-card">
-            <h3 data-i18n="experience.stepOneTitle">Consultation</h3>
-            <p data-i18n="experience.stepOneBody">We analyze your hair texture, face shape, and lifestyle.</p>
-          </article>
-          <article class="experience-card">
-            <h3 data-i18n="experience.stepTwoTitle">Craftsmanship</h3>
-            <p data-i18n="experience.stepTwoBody">Every fade and beard line is sculpted with precision.</p>
-          </article>
-          <article class="experience-card">
-            <h3 data-i18n="experience.stepThreeTitle">Detailing</h3>
-            <p data-i18n="experience.stepThreeBody">Finishing touches, styling, and aftercare tips.</p>
-          </article>
+        <div class="iframe-wrapper">
+          <iframe
+            title="Album Google Photos - Photos à la Une"
+            src="https://photos.google.com/share/ALBUM_ID_A_REMPLACER?key=VOTRE_CLE"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
+        <p class="helper-text">
+          Pour mettre à jour ces photos, ajoutez vos images dans l'album Google Photos dédié aux photos à la Une. Le site
+          se mettra à jour automatiquement.
+        </p>
+      </div>
+    </section>
+
+    <section id="galerie" class="section gallery">
+      <div class="container">
+        <div class="section-header">
+          <h2>Galerie</h2>
+          <p>Découvrez le salon, les coupes et les détails des services. Les images se mettent à jour via Google Photos.</p>
+        </div>
+        <div class="iframe-wrapper">
+          <iframe
+            title="Album Google Photos - Galerie Barber Suisse"
+            src="https://photos.google.com/share/ALBUM_ID_A_REMPLACER?key=VOTRE_CLE"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <p class="helper-text">
+          L'album Google Photos s'affiche sous forme de vignettes cliquables avec un mode plein écran intégré à l'album.
+        </p>
       </div>
     </section>
 
     <section id="contact" class="section contact">
       <div class="container">
         <div class="section-header">
-          <h2 data-i18n="contact.title">Contact</h2>
-          <p data-i18n="contact.subtitle">Reach out to reserve your appointment or ask about our services.</p>
+          <h2>Contact</h2>
+          <p>Réservez votre rendez-vous ou posez une question. Nous répondons rapidement.</p>
         </div>
-        <div class="contact-details">
-          <div class="contact-card">
-            <h3 data-i18n="contact.phoneTitle">Phone</h3>
-            <a href="tel:+212522215455">05 22 21 54 55</a>
-            <a href="tel:+212668774497">06 68 77 44 97</a>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-card">
+              <h3>Adresse</h3>
+              <p>Barber Suisse, Casablanca, Maroc</p>
+            </div>
+            <div class="contact-card">
+              <h3>Téléphone</h3>
+              <a href="tel:+212522215455">05 22 21 54 55</a>
+              <a href="tel:+212668774497">06 68 77 44 97</a>
+            </div>
+            <div class="contact-card">
+              <h3>Email</h3>
+              <p>contact@barbersuisse.com (à venir)</p>
+            </div>
           </div>
-          <div class="contact-card">
-            <h3 data-i18n="contact.whatsappTitle">WhatsApp</h3>
-            <a href="https://wa.me/212668774497" target="_blank" rel="noreferrer">+212 6 68 77 44 97</a>
-          </div>
-          <div class="contact-card">
-            <h3 data-i18n="contact.instagramTitle">Instagram</h3>
-            <a href="https://instagram.com/barber_suisse" target="_blank" rel="noreferrer">@barber_suisse</a>
-          </div>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" placeholder="Votre nom" required />
+              <span class="error" id="nameError">Veuillez saisir votre nom.</span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="vous@email.com" required />
+              <span class="error" id="emailError">Veuillez saisir un email valide.</span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+              <span class="error" id="messageError">Veuillez saisir votre message.</span>
+            </div>
+            <button class="button" type="submit">Envoyer</button>
+          </form>
         </div>
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-group">
-            <label for="name" data-i18n="contact.nameLabel">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your full name"
-              data-i18n-placeholder="contact.namePlaceholder"
-              required
-            />
-            <span class="error" id="nameError" data-i18n="errors.name">Please enter your name.</span>
-          </div>
-          <div class="form-group">
-            <label for="email" data-i18n="contact.emailLabel">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="you@email.com"
-              data-i18n-placeholder="contact.emailPlaceholder"
-              required
-            />
-            <span class="error" id="emailError" data-i18n="errors.email">Please enter a valid email.</span>
-          </div>
-          <div class="form-group">
-            <label for="message" data-i18n="contact.messageLabel">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Tell us what you need"
-              data-i18n-placeholder="contact.messagePlaceholder"
-              required
-            ></textarea>
-            <span class="error" id="messageError" data-i18n="errors.message">Please enter a message.</span>
-          </div>
-          <button class="button" type="submit" data-i18n="contact.submit">Send Message</button>
-        </form>
+        <div class="map-wrapper" aria-label="Carte Google Maps Barber Suisse">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d674.6824176157269!2d-7.608725309552081!3d33.527270509599205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d2b21be5f4d%3A0x759661ac1265ce5e!2sBarber%20suisse!5e0!3m2!1sfr!2sma!4v1769864690625!5m2!1sfr!2sma"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Carte Barber Suisse"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="mentions" class="section legal">
+      <div class="container">
+        <div class="section-header">
+          <h2>Mentions légales</h2>
+          <p>Informations légales et conditions d'utilisation du site.</p>
+        </div>
+        <div class="legal-card">
+          <p>
+            Barber Suisse est un salon de coiffure pour hommes basé à Casablanca. Les informations complètes seront
+            ajoutées par le client (raison sociale, email officiel, etc.).
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-content">
-      <p data-i18n="footer.copy">&copy; 2026 Barber Suisse. All rights reserved.</p>
-      <a href="#contact" data-i18n="footer.contact">Contact Us</a>
+      <div>
+        <p>&copy; <span id="currentYear"></span> Barber Suisse. Tous droits réservés.</p>
+        <a href="#mentions">Mentions légales</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/barber.suisse/" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
     </div>
   </footer>
+
   <a
     class="floating-whatsapp"
     href="https://wa.me/212668774497"
