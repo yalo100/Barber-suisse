@@ -669,3 +669,17 @@ textarea:focus {
     justify-content: center;
   }
 }
+
+/* Logo sizing moved from inline styles */
+#site-logo {
+  width: 240px;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  #site-logo {
+    width: 140px;
+  }
+}
