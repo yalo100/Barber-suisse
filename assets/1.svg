@@ -1,8 +1,0 @@
-<svg width="160" height="44" viewBox="0 0 160 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="160" height="44" rx="22" fill="#111111" />
-  <circle cx="24" cy="22" r="14" fill="#d6b56c" />
-  <path d="M24 10c3.3 0 6 2.7 6 6 0 4.6-6 12-6 12s-6-7.4-6-12c0-3.3 2.7-6 6-6z" fill="#0c0c0c" />
-  <text x="50" y="27" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#f8d98e">
-    Barber Suisse
-  </text>
-</svg>
