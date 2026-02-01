@@ -89,6 +89,7 @@ img {
   padding: 1.4rem 0;
   gap: 1.5rem;
   flex-wrap: wrap;
+  transition: padding 0.25s ease;
 }
 
 .logo {
@@ -100,11 +101,13 @@ img {
   align-items: center;
   gap: 0.75rem;
   color: var(--text-primary);
+  transition: font-size 0.25s ease;
 }
 
 .logo img {
   width: 46px;
   height: 46px;
+  transition: width 0.25s ease, height 0.25s ease;
 }
 
 .main-nav {
@@ -118,6 +121,7 @@ img {
   border-radius: 999px;
   border: 1px solid var(--border-color);
   background-color: var(--muted-black);
+  transition: padding 0.25s ease, font-size 0.25s ease, gap 0.25s ease;
 }
 
 .main-nav a {
@@ -146,6 +150,25 @@ img {
 .main-nav a:hover::after,
 .main-nav a:focus::after {
   width: 100%;
+}
+
+.site-header.is-compact .header-content {
+  padding: 0.85rem 0;
+}
+
+.site-header.is-compact .logo {
+  font-size: 1rem;
+}
+
+.site-header.is-compact #site-logo {
+  width: 180px;
+  height: auto;
+}
+
+.site-header.is-compact .main-nav {
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  gap: 1rem;
 }
 
 .button {

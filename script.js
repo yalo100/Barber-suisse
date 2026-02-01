@@ -63,6 +63,35 @@ if (currentYear) {
   currentYear.textContent = new Date().getFullYear();
 }
 
+const header = document.querySelector(".site-header");
+const compactHeaderOffset = 80;
+
+const updateHeaderOnScroll = () => {
+  if (!header) {
+    return;
+  }
+
+  header.classList.toggle("is-compact", window.scrollY > compactHeaderOffset);
+};
+
+if (header) {
+  let isTicking = false;
+
+  const onScroll = () => {
+    if (!isTicking) {
+      window.requestAnimationFrame(() => {
+        updateHeaderOnScroll();
+        isTicking = false;
+      });
+      isTicking = true;
+    }
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("load", updateHeaderOnScroll);
+  updateHeaderOnScroll();
+}
+
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     const targetId = link.getAttribute("href");
