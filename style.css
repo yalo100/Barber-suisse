@@ -484,6 +484,19 @@ img {
   border: 0;
 }
 
+.gallery-link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2.5rem;
+  color: rgba(248, 217, 142, 0.8);
+}
+
+.section--light .gallery-link-card {
+  color: rgba(20, 20, 20, 0.8);
+}
+
 .helper-text {
   margin-top: 1rem;
   color: rgba(248, 217, 142, 0.7);
