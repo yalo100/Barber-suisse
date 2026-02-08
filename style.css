@@ -497,14 +497,6 @@ img {
   color: rgba(20, 20, 20, 0.8);
 }
 
-.helper-text {
-  margin-top: 1rem;
-  color: rgba(248, 217, 142, 0.7);
-}
-
-.section--light .helper-text {
-  color: rgba(20, 20, 20, 0.7);
-}
 
 .contact-grid {
   display: grid;
@@ -604,17 +596,6 @@ textarea:focus {
   border: 0;
 }
 
-.legal {
-  background-color: var(--muted-black);
-}
-
-.legal-card {
-  border: 1px solid var(--border-color);
-  border-radius: 18px;
-  padding: 1.6rem;
-  background-color: var(--deep-black);
-  color: rgba(248, 217, 142, 0.7);
-}
 
 @keyframes service-image-arrive {
   to {
