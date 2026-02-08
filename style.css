@@ -336,6 +336,11 @@ img {
   color: rgba(20, 20, 20, 0.7);
 }
 
+.featured .section-header h2,
+.featured .section-header p {
+  color: var(--text-primary);
+}
+
 .section--light p,
 .section--light li {
   color: rgba(20, 20, 20, 0.75);
