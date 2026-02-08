@@ -511,8 +511,9 @@ img {
   margin-bottom: 2.5rem;
 }
 
-.contact-grid--center {
-  justify-items: center;
+.contact-grid--split {
+  grid-template-columns: minmax(260px, 1fr) minmax(280px, 1.1fr);
+  align-items: center;
 }
 
 .contact .section-header {
@@ -528,7 +529,8 @@ img {
   display: grid;
   gap: 1rem;
   width: min(520px, 100%);
-  text-align: center;
+  text-align: left;
+  margin: 0 auto;
 }
 
 .contact-card {
@@ -536,7 +538,7 @@ img {
   border-radius: 18px;
   border: 1px solid var(--border-color);
   padding: 1.4rem;
-  text-align: center;
+  text-align: left;
 }
 
 .contact-card a {
@@ -565,6 +567,12 @@ img {
   width: 100%;
   height: 360px;
   border: 0;
+}
+
+@media (max-width: 900px) {
+  .contact-grid--split {
+    grid-template-columns: 1fr;
+  }
 }
 
 
