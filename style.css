@@ -338,7 +338,8 @@ img {
 
 .featured .section-header h2,
 .featured .section-header p {
-  color: var(--text-primary);
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
 }
 
 .section--light p,
