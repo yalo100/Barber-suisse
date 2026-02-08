@@ -511,9 +511,24 @@ img {
   margin-bottom: 2.5rem;
 }
 
+.contact-grid--center {
+  justify-items: center;
+}
+
+.contact .section-header {
+  align-items: center;
+  text-align: center;
+}
+
+.contact .section-header p {
+  margin: 0 auto;
+}
+
 .contact-info {
   display: grid;
   gap: 1rem;
+  width: min(520px, 100%);
+  text-align: center;
 }
 
 .contact-card {
@@ -521,6 +536,7 @@ img {
   border-radius: 18px;
   border: 1px solid var(--border-color);
   padding: 1.4rem;
+  text-align: center;
 }
 
 .contact-card a {
@@ -529,17 +545,7 @@ img {
   color: var(--gold-bright);
 }
 
-.contact-form {
-  background-color: var(--muted-black);
-  border-radius: 18px;
-  border: 1px solid var(--border-color);
-  padding: 1.8rem;
-  display: grid;
-  gap: 1rem;
-}
-
-.section--light .contact-card,
-.section--light .contact-form {
+.section--light .contact-card {
   background-color: #ffffff;
   border-color: rgba(12, 12, 12, 0.1);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
@@ -547,47 +553,6 @@ img {
 
 .section--light .contact-card a {
   color: #8c6420;
-}
-
-.form-group {
-  display: grid;
-  gap: 0.35rem;
-}
-
-input,
-textarea {
-  background-color: #111111;
-  border: 1px solid rgba(248, 217, 142, 0.2);
-  border-radius: 12px;
-  padding: 0.75rem 0.9rem;
-  color: var(--gold-bright);
-  font-size: 0.95rem;
-}
-
-.section--light input,
-.section--light textarea {
-  background-color: #ffffff;
-  border-color: rgba(10, 10, 10, 0.15);
-  color: #121212;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(214, 181, 108, 0.2);
-}
-
-.section--light input:focus,
-.section--light textarea:focus {
-  border-color: rgba(18, 18, 18, 0.6);
-  box-shadow: 0 0 0 3px rgba(12, 12, 12, 0.1);
-}
-
-.error {
-  display: none;
-  color: #fca5a5;
-  font-size: 0.85rem;
 }
 
 .map-wrapper {
